@@ -12,7 +12,7 @@ export default function SolutionSection({ onGetSetup }: SolutionSectionProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              Your Own Local AI — Installed, Secured, and Customized
+              Your Own Local AI - Installed, Secured, and Customized
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               We install a private AI model that runs on your computer or local
