@@ -1,0 +1,126 @@
+Build a modern, clean, mobile-responsive landing page for my business:
+
+Business Name: Secure AI Solutions
+Domain: secureaisolutions.ca
+Industry: Local, privacy-focused AI solutions for small Canadian businesses (healthcare clinics, legal offices, accounting firms, consultants).
+
+Goal of Website:
+Get small businesses to book a free consultation to set up a private, local LLM (no cloud, no external data sharing).
+
+Brand Style / Design
+
+Clean, white background
+
+Minimal blue accent: #2A6EF7
+
+Font: Inter or similar clean sans-serif
+
+Professional, trustworthy, Canadian tone
+
+Simple iconography (lock, shield, AI chip, document)
+
+Page Structure
+1. Hero Section
+
+Headline: Private AI Solutions for Canadian Small Businesses
+
+Subheadline: Deploy a secure, local LLM that runs 100% offline. Keep every document, note, and client file private and compliant.
+
+Buttons:
+
+Book Free Consultation (primary)
+
+How It Works (secondary)
+
+2. Pain Points Section
+
+Headline: Why Cloud AI Doesn’t Work for Sensitive Data
+Three boxes with icons:
+
+Privacy Risk — Client data leaves your office
+
+Compliance Issues — PHI, legal files, financial records
+
+Rising Costs — AI usage becomes expensive
+
+3. Solution Section
+
+Headline: Your Own Local AI — Installed, Secured, and Customized
+Body:
+We install a private AI model that runs on your computer or local server.
+No cloud. No third-party access.
+Fully compliant with medical, legal, and financial data requirements.
+Button: Get Your Local AI Setup
+
+4. Features Section
+
+6-icon grid:
+
+On-device LLM (offline)
+
+Secure data processing
+
+Custom workflows (summaries, forms, notes)
+
+Voice-to-text for clinics
+
+Search across your documents
+
+One-time setup (no recurring cloud fees)
+
+5. Use Cases Section
+
+Headline: Built for Privacy-First Professionals
+4 cards:
+
+Healthcare Providers — charting assistance, summaries
+
+Lawyers — document drafting, case summaries
+
+Accountants — client notes, reconciliations
+
+Consultants — research + reporting
+
+6. Pricing Section
+
+Headline: Simple, Transparent Pricing
+Two pricing cards:
+Starter — $299
+
+Local model installation
+
+Basic workflows
+
+1 device
+
+Professional — $699
+
+Full configuration
+
+File search setup
+
+Industry workflows
+
+Ongoing support
+
+7. Final CTA Section
+
+Headline: Ready to Bring Private AI Into Your Business?
+Button: Book a Free Call
+Footer: Secure AI Solutions | Private AI for Canadian Businesses
+
+Technical Requirements
+
+Responsive for mobile and desktop
+
+Clean CSS
+
+Fast-loading
+
+Minimal JS
+
+Easy to edit content sections
+
+Include anchor links: #home #features #pricing #contact
+
+Use simple illustrations or placeholders (no heavy images)
