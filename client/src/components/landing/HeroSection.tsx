@@ -32,7 +32,7 @@ export default function HeroSection({
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-          Private AI Solutions for Canadian Small Businesses
+          Secure and Local AI Solutions for Canadian Small Businesses
         </h1>
         <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed">
           Deploy a secure, local LLM that runs 100% offline. Keep every
