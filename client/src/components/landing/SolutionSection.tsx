@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Server, Cloud, CloudOff, Check, X } from "lucide-react";
+import { Server, Cloud, Check, X } from "lucide-react";
 
 interface SolutionSectionProps {
   onGetSetup?: () => void;
@@ -44,7 +44,7 @@ export default function SolutionSection({ onGetSetup }: SolutionSectionProps) {
           </div>
 
           <div className="flex justify-center">
-            <div className="relative w-full max-w-md">
+            <div className="w-full max-w-md">
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-900 rounded-md p-6 text-center">
                   <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/50 flex items-center justify-center mx-auto mb-3">
@@ -91,10 +91,6 @@ export default function SolutionSection({ onGetSetup }: SolutionSectionProps) {
                     </li>
                   </ul>
                 </div>
-              </div>
-
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
-                <CloudOff className="h-8 w-8 text-primary" />
               </div>
             </div>
           </div>
