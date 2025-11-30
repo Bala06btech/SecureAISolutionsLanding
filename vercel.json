@@ -1,12 +1,5 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dist/index.html"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "client/dist",
+  "cleanUrls": true
 }
