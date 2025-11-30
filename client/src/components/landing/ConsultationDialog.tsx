@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Check } from "lucide-react";
+import { Check, Loader2 } from "lucide-react";
 
 interface ConsultationDialogProps {
   open: boolean;
@@ -31,6 +31,7 @@ export default function ConsultationDialog({
 }: ConsultationDialogProps) {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,14 +40,40 @@ export default function ConsultationDialog({
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Consultation form submitted:", formData);
-    setSubmitted(true);
-    toast({
-      title: "Consultation Requested!",
-      description: "We'll be in touch within 24 hours.",
-    });
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/consultation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send consultation request");
+      }
+
+      setSubmitted(true);
+      toast({
+        title: "Consultation Requested!",
+        description: "We'll be in touch within 24 hours.",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleClose = () => {
@@ -108,6 +135,7 @@ export default function ConsultationDialog({
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
+                disabled={isLoading}
                 data-testid="input-name"
               />
             </div>
@@ -122,6 +150,7 @@ export default function ConsultationDialog({
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
+                disabled={isLoading}
                 data-testid="input-email"
               />
             </div>
@@ -138,6 +167,7 @@ export default function ConsultationDialog({
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
                 }
+                disabled={isLoading}
                 data-testid="input-phone"
               />
             </div>
@@ -148,6 +178,7 @@ export default function ConsultationDialog({
                 onValueChange={(value) =>
                   setFormData({ ...formData, businessType: value })
                 }
+                disabled={isLoading}
               >
                 <SelectTrigger data-testid="select-business-type">
                   <SelectValue placeholder="Select..." />
@@ -173,6 +204,7 @@ export default function ConsultationDialog({
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
+              disabled={isLoading}
               data-testid="input-message"
             />
           </div>
@@ -180,9 +212,17 @@ export default function ConsultationDialog({
           <Button
             type="submit"
             className="w-full"
+            disabled={isLoading}
             data-testid="button-submit-consultation"
           >
-            Request Consultation
+            {isLoading ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              "Request Consultation"
+            )}
           </Button>
         </form>
       </DialogContent>
