@@ -30,7 +30,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const { data, error } = await resend.emails.send({
       from: 'Secure AI Solutions <onboarding@resend.dev>',
-      to: ['onboarding@resend.dev'],
+      to: ['lalatheghillli@gmail.com'],
       subject: `New Consultation Request from ${name}`,
       html: emailHtml,
       replyTo: email,
