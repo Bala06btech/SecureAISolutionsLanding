@@ -1,10 +1,13 @@
 {
   "buildCommand": "npm install && npm run build",
-  // REMOVE outputDirectory
+  "outputDirectory": "dist/public",
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
     }
-  ]
+  ],
+  "env": {
+    "RESEND_API_KEY": "@resend-api-key"
+  }
 }
